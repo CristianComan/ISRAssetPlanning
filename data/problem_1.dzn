@@ -1,0 +1,46 @@
+%problem 1
+% the problem can be also formulated using numbers only: n number of CRs, m number of ASSETS, p number of locations, q number of intels
+
+% enumerations
+
+CR = {CR1, CR2, CR3, CR4, CR5, CR6, CR7, CR8, CR9, CR10};
+
+% ASSET = {RQ_1A_Predator, MQ_9_Reaper, RQ_4_Global_Hawk, RC_135_Rivet_Joint, E_8_JSTARS, U_2_Dragon_Lady,F_16, NO_ASSET};
+
+INTELL = {FMV, SIGINT, GMTI, WASP};
+
+NAI = {Mannheim, Karlsruhe, Baden_Baden, Buehl, Offenburg, Lahr_Schwarzwald, Loerrach};
+
+BASE = {Heidelberg , Freiburg_im_Breisgau};
+
+
+% properties of CRS
+
+required_int = [FMV, WASP, SIGINT, FMV, GMTI, SIGINT, FMV, GMTI, SIGINT, FMV];
+
+priority = [2, 3, 1, 1, 2, 3, 4, 2, 3, 1];
+
+location = [Mannheim, Karlsruhe, Baden_Baden, Buehl, Offenburg, Lahr_Schwarzwald, Loerrach, Mannheim, Karlsruhe, Baden_Baden];
+
+required_start_time = [7, 8, 8, 9, 11, 12, 13, 10, 15, 13];
+
+required_duration = [1, 2, 1, 1, 2, 1, 1, 2, 1, 2];
+
+ops_start_time = [7, 8, 8, 9, 11, 12, 13, 10, 15, 13];
+
+ops_duration = [1, 2, 1, 1, 2, 1, 1, 2, 1, 2];
+
+% properties of assets
+
+sensor = [| 1, 1, 0, 0, 0, 0, 1, 0
+          | 0, 0, 1, 1, 0, 1, 1, 0
+          | 1, 0, 1, 0, 1, 0, 0, 0
+          | 0, 1, 1, 0, 1, 1, 1, 0 |];
+
+%capacity = [480, 480, 480, 480, 480, 360, 360, 0];
+
+capacity = [8, 8, 8, 8, 8, 6, 6, 0];
+
+on_station = [0, 0, 0, 0, 0, 0, 0, 0];
+
+home = [Heidelberg, Heidelberg, Freiburg_im_Breisgau, Freiburg_im_Breisgau, Heidelberg, Freiburg_im_Breisgau, Heidelberg, Heidelberg];
